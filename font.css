@@ -1,0 +1,9 @@
+@font-face {
+ font-family: Pompadur;
+ src:url(fonts/pompadur.eot);
+}
+/* Для остальных браузеров */
+@font-face{
+	font-family: Pompadur;
+	src:url(fonts/pompadur.ttf);
+}

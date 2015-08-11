@@ -1,0 +1,159 @@
+@charset "utf-8";
+/* Только для Internet Explorer */
+body {
+	font-family: Pompadur;
+	font-size: 12pt;
+	margin: 0;
+	color:#222;
+	background:url(images/bgd.png) repeat;
+}
+
+a img { /* Этот селектор убирает стандартную синюю рамку, которая появляется у изображений в некоторых браузерах, если вокруг изображения есть ссылка. */
+	border: none;
+}
+a {
+	text-decoration: none;
+	color:#222;
+   }
+a:hover {
+	color:#222;
+	font-weight: bold;
+}
+h3 {
+	text-transform: uppercase; /*Заглавные*/
+	margin-top: 0;
+	font-size: 18px;
+}
+/* ~~ Оформление ссылок на вашем сайте должно оставаться в этом порядке, включая группу селекторов, создающих эффект наведения. ~~ */
+
+/* ~~ Этот контейнер фиксированной ширины окружает остальные блоки ~~ */
+.container {
+	width: 1010px;
+	margin: 0 auto; /* При указании автоматического значения по сторонам в совокупности с шириной макет будет центрироваться. */
+}
+/* ~~ Заголовку не задается  ширина. Он растянется на всю ширину макета. ~~ */
+header {
+	background-color:#222;
+	height:45px;
+	padding-top:1px;
+	position: relative;
+}
+.sidebar {
+	padding: 20px 20px 20px 20px;
+	margin-top:20px;
+	text-transform: uppercase; /*Заглавные*/
+	background-color: #f6f6f6;
+	float: right;
+	border: 1px solid #ccc;
+	border-style:solid;
+	width: 258px;
+	height:auto;
+}
+.img-right{
+float: right;
+}
+
+.content {
+	margin:0px 0 20px 0;
+	width: 690px;
+	float: left;
+/*	border: 1px solid  #ccc;*/
+}
+/*Новости*/
+.view-content{
+	margin: 20px 0 0 0;
+	background-color: #f6f6f6;
+	border-style:solid;
+	border: 1px solid #ccc;
+    padding: 19px;
+	max-width:650px;
+	min-width:650px;
+}
+.view-content a:hover {
+	border-bottom: 1px solid transparent;
+	border-color:#ccc;
+	color:#222222;
+	text-align:center; 
+}
+.view-content a {
+	color:#222222;
+	text-align: center;
+	border-color:rgba(0,0,0,0.00);
+} 
+/* ~~ Этот сгруппированный селектор выдает списки в пространстве .content ~~ */
+.content ul, .content ol {
+	padding: 0 15px 15px 40px; /* Это поле представляет собой зеркальное отражение правого поля в правиле для заголовков и параграфов выше. Внизу поле помещено как граница между элементами списков, а слева — как отступ. При необходимости поля могут быть настроены. */
+}
+
+/* ~~ Стили списка навигации (можно убрать, если используется готовое меню, например Spry) ~~ */
+.nav {
+	text-transform: uppercase; /*Заглавные*/
+	outline: none;
+	border-spacing: 0px 0px;
+	margin-left:-20px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.nav a:hover {
+	-webkit-transition: border-color 0.5s;
+	transition: border-color 0.5s;
+	border-bottom: 2px solid transparent;
+	border-color:#ccc;
+	color:#f6f6f6;
+	text-align:left; 
+}
+.nav a {
+	padding: 7px 0;
+	margin: 0 19px 0 0;
+	color:#ccc;
+	border-color:rgba(0,0,0,0.00);
+	text-align: left;
+} 
+.nav li {
+	list-style-type: none;
+	display: inline; /* Отображать как строчный элемент */
+}
+.nav ul li{
+	float: left;
+	margin-top: -3px;
+}
+.hr {
+	border-bottom: 1px solid #ccc;
+	padding-bottom: 4px;
+}
+/* ~~ Нижний колонтитул ~~ */
+.footer{
+	margin-left: 20px;
+}
+footer {
+	padding: 20px 0 10px 0;
+  	border-top: 1px solid #ccc;
+  	border-bottom: 1px solid #ccc;
+  	margin-bottom: 20px;
+
+	position: relative;/* IE6 получает hasLayout для правильной очистки. */
+	height:46px;
+	clear: both; /* Это свойство очистки заставляет .container видеть место окончания столбцов и включать их. */
+}
+/* ~~ Прочие классы float/clear ~~ */
+.fltrt {  /* Этот класс можно использовать для обтекания элемента справа на странице. Обтекаемый элемент должен предшествовать элементу, с которым он должен находиться рядом на странице. */
+	float: right;
+	margin-left: 8px;
+}
+.fltlft { /* Этот класс можно использовать для обтекания элемента слева на странице. Обтекаемый элемент должен предшествовать элементу, с которым он должен находиться рядом на странице. */
+	float: left;
+	margin-right: 8px;
+}
+.clearfloat { /* Этот класс можно поместить в теге <br /> или в пустом блочном элементе в качестве конечного элемента, следующего за последним обтекаемым блоком (внутри .container), если .footer удален или извлечен из .container */
+	clear:both;
+	height:0;
+	font-size: 1px;
+	line-height: 0px;
+}
+
+/*Поддержка HTML5 — создает новые теги HTML5 display:block для корректного отображения этих тегов браузерами. */
+header, section, footer, aside, article, figure {
+	display: block;
+}
+
